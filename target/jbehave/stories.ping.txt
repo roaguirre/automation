@@ -1,0 +1,16 @@
+
+(stories/ping.story)
+
+
+Scenario: Ping google.com
+When I ping 'www.ayfmarket.cl' (PENDING)
+@When("I ping 'www.ayfmarket.cl'")
+@Pending
+public void whenIPingwwwayfmarketcl() {
+  // PENDING
+}
+
+
+
+
+

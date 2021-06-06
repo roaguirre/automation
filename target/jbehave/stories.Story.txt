@@ -1,0 +1,5 @@
+
+(stories/Story.story)
+
+
+Scenario: Search for Rickie video
