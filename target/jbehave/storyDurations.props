@@ -1,8 +1,0 @@
-#org.jbehave.core.embedder.StoryManager
-#Sun Jun 06 04:50:58 CLT 2021
-stories/copyFilesOverSsh.story=2000
-total=27000
-threadAverage=27000
-threads=1
-stories/YoutubeSearch.story=23000
-stories/ping.story=2000

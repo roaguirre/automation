@@ -1,0 +1,12 @@
+### Maven output
+target/
+
+# IDE
+.idea
+.vscode
+
+# Mac
+.DS_Store
+
+# Other
+.env
