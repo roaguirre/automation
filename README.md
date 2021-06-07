@@ -1,8 +1,10 @@
 ## Setup
 
-First add an ssh key to your account, then clone this repository using ssh!
+First, [set up a ssh key](https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/) and add it to your Bitbucket account, then clone this repository using ssh!
 
-* Install Java
+```
+git clone git@bitbucket.org:aguirreibarra/automation.git
+```
+
+* Install Java SDK
 * Download Chrome
-* Download the ChromeDriver
-* Set the chromedriver path
