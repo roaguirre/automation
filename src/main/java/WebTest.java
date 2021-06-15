@@ -27,7 +27,6 @@ public class WebTest extends JUnitStories {
     public WebTest() {
         super();
         classFile = codeLocationFromClass(this.getClass());
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
     }
 
     @Override
