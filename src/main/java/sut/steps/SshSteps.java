@@ -10,7 +10,6 @@ public class SshSteps {
     @Then("I copy $pathToFile into $pathToDestination")
     public void copyOverSsh(String PathToFile, String pathToDestination) throws IOException {
         Runtime.getRuntime().exec("scp " + PathToFile + " username@a:" + pathToDestination);
-        //
     }
 
     @When("I ping $address")
@@ -22,7 +21,3 @@ public class SshSteps {
         }
     }
 }
-
-    //executeScript()
-    //Runtime.getRuntime()
-    //scp <source> <destination>

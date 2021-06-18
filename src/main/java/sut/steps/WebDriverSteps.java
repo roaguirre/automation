@@ -4,12 +4,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.jbehave.core.annotations.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
-
-import static java.lang.Thread.sleep;
+import java.time.Duration;
 
 public class WebDriverSteps {
     ChromeDriver driver;
@@ -30,23 +31,24 @@ public class WebDriverSteps {
     }
 
     @Given("I am at '$url'")
-    public void givenOnURL(String url) throws MalformedURLException {
+    @When("I am at '$url'")
+    public void whenOnURL(String url) {
         try {
             driver.get(url);
-            driver.wait(10000);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    @When("I wait for $seconds seconds")
-    public void waitFor(int seconds) throws InterruptedException {
-        sleep(seconds * 1000);
+    @Then("I find '$text' text on the page")
+    public void isTextOnPage(String text) {
+        String containedText = getWithTimeout(By.xpath("//body"),5000).getText();
+        Assert.assertTrue(containedText.contains(text));
     }
 
-    @Then("I should see '$text' text on the page")
-    public void seeTextOnPage(String text) throws InterruptedException {
-        String containedText = driver.findElement(By.xpath("//body")).getText();
-        Assert.assertTrue(containedText.contains(text));
+    public WebElement getWithTimeout(By locator, int timeOutInMillis){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(timeOutInMillis));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return driver.findElement(locator);
     }
 }
