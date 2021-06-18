@@ -13,27 +13,27 @@ pipeline {
         }
         stage("Validate") {
             steps {
-                sh "mvn verify"
+                sh "mvn validate"
             }
         }
         stage("Compile") {
             steps {
-                sh "mvn clean install"
+                sh "mvn clean compile"
             }
         }
         stage("Test") {
             steps {
-                sh "mvn clean install"
+                sh "mvn test"
             }
         }
         stage("Package") {
             steps {
-                sh "mvn clean install"
+                sh "mvn clean package"
             }
         }
         stage("Verify") {
             steps {
-                sh "mvn clean install"
+                sh "mvn verify"
             }
         }
         stage("Install") {
@@ -43,7 +43,7 @@ pipeline {
         }
         stage("Run") {
             steps {
-                echo 'Hello world'
+                java -jar com.aguirreibarra.automation-1.0-SNAPSHOT.jar
             }
         }
     }
