@@ -43,7 +43,8 @@ pipeline {
         }
         stage("Run") {
             steps {
-                java -jar com.aguirreibarra.automation-1.0-SNAPSHOT.jar
+                sh "mvn compile exec:java -Dexec.mainClass=\"com.aguirreibarra.automation.WebTest\""
+                //java -cp target/automation-1.0-SNAPSHOT.jar com.aguirreibarra.automation.WebTest
             }
         }
     }

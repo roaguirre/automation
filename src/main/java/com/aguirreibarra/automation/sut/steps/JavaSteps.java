@@ -1,4 +1,4 @@
-package sut.steps;
+package com.aguirreibarra.automation.sut.steps;
 
 import org.jbehave.core.annotations.When;
 

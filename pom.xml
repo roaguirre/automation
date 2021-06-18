@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <description>Automated tests for the web</description>
 
     <groupId>com.aguirreibarra</groupId>
     <artifactId>automation</artifactId>
@@ -42,19 +43,16 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>RELEASE</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>RELEASE</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
             <version>2.14.0</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
