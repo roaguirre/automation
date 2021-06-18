@@ -1,4 +1,4 @@
-package sut.steps;
+package com.aguirreibarra.automation.sut.steps;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.jbehave.core.annotations.*;

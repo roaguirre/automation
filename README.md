@@ -10,7 +10,7 @@ git clone git@bitbucket.org:aguirreibarra/automation.git
 * Download Chrome
 
 # How to run
-On Intellij, create a JUnit run configuration, select the class ```WebTest```. Then
+On Intellij, create a JUnit run configuration, select the class ```com.aguirreibarra.automation.WebTest```. Then
 add these VM options:
 
 ```

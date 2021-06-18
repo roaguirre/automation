@@ -1,3 +1,5 @@
+package com.aguirreibarra.automation;
+
 import com.github.valfirst.jbehave.junit.monitoring.JUnitReportingRunner;
 import org.jbehave.core.configuration.Configuration;
 import org.jbehave.core.configuration.MostUsefulConfiguration;
@@ -9,7 +11,7 @@ import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.jbehave.core.steps.InjectableStepsFactory;
 import org.jbehave.core.steps.InstanceStepsFactory;
 import org.junit.runner.RunWith;
-import sut.steps.YoutubeSteps;
+import com.aguirreibarra.automation.sut.steps.YoutubeSteps;
 
 import java.lang.invoke.MethodHandles;
 import java.net.URL;
@@ -23,6 +25,10 @@ import static org.jbehave.core.io.CodeLocations.codeLocationFromClass;
 public class WebTest extends JUnitStories {
     private final URL classFile;
     private static final Logger log = Logger.getLogger(String.valueOf(MethodHandles.lookup().lookupClass()));
+
+    public static void main(String[] args) {
+        new WebTest().run();
+    }
 
     public WebTest() {
         super();
