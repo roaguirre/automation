@@ -1,4 +1,4 @@
-### Maven output
+# Maven output
 target/
 
 # IDE
@@ -10,3 +10,4 @@ target/
 
 # Other
 .env
+.allure-results/

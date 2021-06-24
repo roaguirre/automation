@@ -1,0 +1,7 @@
+target/
+.git/
+.idea/
+.vscode/
+.git/
+.DS_Store
+.allure-results/
