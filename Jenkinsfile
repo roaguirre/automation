@@ -1,8 +1,9 @@
 pipeline {
-    agent any
-
-    tools {
-        maven "3.8.1"
+    agent {
+        docker {
+            image "maven:3.8.1"
+            label "docker"
+        }
     }
 
     stages {
@@ -44,14 +45,7 @@ pipeline {
         stage("Run") {
             steps {
                 sh "mvn compile exec:java -Dexec.mainClass=\"com.aguirreibarra.automation.WebTest\""
-                //java -cp target/automation-1.0-SNAPSHOT.jar com.aguirreibarra.automation.WebTest
             }
-        }
-    }
-
-    post {
-        always {
-            cleanWs()
         }
     }
 }
